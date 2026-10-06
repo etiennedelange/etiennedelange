@@ -1,4 +1,4 @@
-<img src="assets/header.svg" alt="etienne. Full-stack engineer, Gqeberha, South Africa" width="100%">
+<img src="assets/header.svg" alt="etienne. Full-stack engineer" width="100%">
 
 I'm Etienne de Lange, a full-stack engineer in Gqeberha, South Africa. I build web products, personal finance tools and technical utilities, and I check the results against concrete evidence.
 
