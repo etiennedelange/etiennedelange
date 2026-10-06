@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" width="960" height="280" role="img" aria-labelledby="t d">
+  <title id="t">Etienne de Lange</title>
+  <desc id="d">Built slowly enough to understand, quickly enough to ship. Fifteen years of software across legal tech, property and fleet telematics.</desc>
+  <style>
+    :root { --bg:#ffffff; --ink:#0a0a0a; --muted:#686f7c; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#1c160e; --ink:#f0e8d8; --muted:#a89178; }
+    }
+    text { font-family:"Space Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .bg { fill:var(--bg); }
+    .dots { opacity:0.12; }
+    .dotc { fill:var(--ink); }
+    .burst { fill:#eab308; }
+    .ink { fill:var(--ink); }
+    .muted { fill:var(--muted); }
+    .accent { fill:#f5d90a; }
+    .eyebrow { font-size:13px; font-weight:600; letter-spacing:0.18em; }
+    .h1 { font-size:44px; font-weight:700; letter-spacing:-0.025em; }
+    .sub { font-size:17px; }
+    .ring { fill:none; stroke:#fff; stroke-width:56; opacity:0; }
+    @media (prefers-reduced-motion: no-preference) {
+      .rise { animation: rise 500ms cubic-bezier(0.2,0,0,1) both; animation-delay: var(--d); }
+      .mark { transform-box:fill-box; transform-origin:left center; animation: mark 600ms cubic-bezier(0.2,0,0,1) 700ms both; }
+      .ring { transform-box:fill-box; transform-origin:center; animation: burst 8s linear 1.2s infinite; }
+      .burst { animation: hour 30s linear infinite; }
+    }
+    @keyframes rise  { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+    @keyframes mark  { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+    @keyframes burst { 0% { transform:scale(0.02); opacity:0.9; } 45% { opacity:0.9; } 65%, 100% { transform:scale(6.5); opacity:0; } }
+    /* the portfolio's time-of-day dot colours, one day every 30s */
+    @keyframes hour  { 0%, 100% { fill:#4ade80; } 21% { fill:#f97316; } 29% { fill:#eab308; } 46% { fill:#38bdf8; } 67% { fill:#f59e0b; } 79% { fill:#22c55e; } }
+  </style>
+  <defs>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle class="dotc" cx="14" cy="14" r="1.5"/></pattern>
+    <pattern id="gridBurst" width="28" height="28" patternUnits="userSpaceOnUse"><circle class="burst" cx="14" cy="14" r="2.2"/></pattern>
+    <mask id="ringMask"><circle class="ring" cx="720" cy="140" r="100" vector-effect="non-scaling-stroke"/></mask>
+  </defs>
+
+  <rect class="bg" width="960" height="280"/>
+  <rect class="dots" width="960" height="280" style="fill:url(#grid)"/>
+  <rect width="960" height="280" fill="url(#gridBurst)" mask="url(#ringMask)"/>
+
+  <text class="muted eyebrow rise" style="--d:0ms" x="56" y="76">ETIENNE DE LANGE · PORT ELIZABETH, SOUTH AFRICA</text>
+  <text class="ink h1 rise" style="--d:120ms" x="56" y="134">Built slowly enough to understand,</text>
+  <g class="rise" style="--d:240ms">
+    <rect class="accent mark" x="56" y="174" width="462" height="15"/>
+    <text class="ink h1" x="56" y="184">quickly enough to ship.</text>
+  </g>
+  <text class="muted sub rise" style="--d:360ms" x="56" y="232">Fifteen years of software across legal tech, property and fleet telematics.</text>
+</svg>

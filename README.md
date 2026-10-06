@@ -1,4 +1,3 @@
-<img src="assets/header.svg" alt="etienne. Full-stack engineer" width="100%">
+<a href="https://portfolio.etiennedelange.workers.dev/"><img src="assets/hero.svg" alt="Etienne de Lange. Built slowly enough to understand, quickly enough to ship. Fifteen years of software across legal tech, property and fleet telematics." width="100%"></a>
 
-<img src="assets/stack.svg" alt="Stack: TypeScript, React, Next.js, SvelteKit, Tailwind, PostgreSQL, Docker, Cloudflare, Vercel, Vitest, Playwright" width="100%">
-
+[Portfolio](https://portfolio.etiennedelange.workers.dev/) · [etienne.de.lange1@gmail.com](mailto:etienne.de.lange1@gmail.com)
