@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 230" width="960" height="230" role="img" aria-label="Selected projects: Portfolio, StravaDash, SA Retirement Calculator">
+  <style>
+    :root { --bg:#fef8ec; --elev:#f9f1e1; --line:#e6d7b8; --fg:#00404a; --muted:#3f6265; --subtle:#576c6d; --accent:#0099ad; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#2e3440; --elev:#3b4252; --line:#4c566a; --fg:#eceff4; --muted:#d8dee9; --subtle:#b2bccd; --accent:#88c0d0; }
+    }
+    .bg { fill:var(--bg); }
+    text { font-family:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+    .mono { font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-variant-ligatures:none; }
+    .label { font-size:12px; letter-spacing:0.05em; text-transform:uppercase; fill:var(--subtle); }
+    .box { fill:var(--elev); stroke:var(--line); stroke-width:1; }
+    .bar { fill:var(--accent); }
+    .name { font-size:18px; font-weight:600; fill:var(--fg); }
+    .stack { font-size:12px; fill:var(--subtle); }
+    .desc { font-size:14px; fill:var(--muted); }
+    @media (prefers-reduced-motion: no-preference) {
+      .card { animation: rise 250ms cubic-bezier(0.2,0,0,1) both; animation-delay: calc(var(--i) * 120ms); }
+      .bar { transform-box:fill-box; transform-origin:left; animation: grow 700ms cubic-bezier(0.2,0,0,1) both, sweep 9s ease-in-out infinite; animation-delay: calc(250ms + var(--i) * 120ms), calc(3s + var(--i) * 3s); }
+    }
+    @keyframes rise  { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+    @keyframes grow  { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+    @keyframes sweep { 0%, 20%, 100% { opacity:1; } 10% { opacity:0.25; } }
+  </style>
+  <rect class="bg" width="960" height="230"/>
+  <text class="mono label" x="64" y="30">Selected work</text>
+  <g class="card" style="--i:0">
+    <rect class="box" x="64" y="52" width="272" height="150" rx="8"/>
+    <rect class="bar" x="64" y="52" width="272" height="2"/>
+    <text class="name" x="84" y="88">Portfolio</text>
+    <text class="mono stack" x="84" y="110">SvelteKit · Svelte 5 · Tailwind v4</text>
+    <text class="desc" x="84" y="146">Interactive identity site with a</text>
+    <text class="desc" x="84" y="166">terminal-style command palette.</text>
+  </g>
+  <g class="card" style="--i:1">
+    <rect class="box" x="352" y="52" width="272" height="150" rx="8"/>
+    <rect class="bar" x="352" y="52" width="272" height="2"/>
+    <text class="name" x="372" y="88">StravaDash</text>
+    <text class="mono stack" x="372" y="110">React 19 · Hono · Workers + D1</text>
+    <text class="desc" x="372" y="146">Quiet instrument-panel dashboard</text>
+    <text class="desc" x="372" y="166">for Strava data, on Cloudflare.</text>
+  </g>
+  <g class="card" style="--i:2">
+    <rect class="box" x="640" y="52" width="272" height="150" rx="8"/>
+    <rect class="bar" x="640" y="52" width="272" height="2"/>
+    <text class="name" x="660" y="88">SA Retirement Calculator</text>
+    <text class="mono stack" x="660" y="110">Next.js 16 · Supabase · Vitest</text>
+    <text class="desc" x="660" y="146">Retirement and tax modelling for</text>
+    <text class="desc" x="660" y="166">South Africa, with Monte Carlo.</text>
+  </g>
+</svg>
